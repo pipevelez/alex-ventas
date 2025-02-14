@@ -67,3 +67,33 @@ function cargarProductosDestacados() {
 
 // Cargar productos destacados al iniciar la página
 document.addEventListener('DOMContentLoaded', cargarProductosDestacados);
+
+// Control del menú desplegable
+document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene el scroll automático
+        const dropdown = this.closest('.dropdown');
+        dropdown.classList.toggle('active');
+        
+        // Cerrar otros dropdowns abiertos
+        document.querySelectorAll('.dropdown').forEach(other => {
+            if (other !== dropdown) other.classList.remove('active');
+        });
+    });
+});
+
+// Cerrar dropdown al hacer clic fuera
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+});
+
+// Cerrar dropdown en scroll
+window.addEventListener('scroll', () => {
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
+});

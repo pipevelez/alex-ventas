@@ -63,3 +63,14 @@ nav ul li a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
