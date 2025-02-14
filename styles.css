@@ -1,0 +1,400 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(to bottom, #f4f4f4, #ffffff);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61; /* Color de acento al hacer hover */
+}
+
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #555; /* Cambio de color al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sección Hero */
+.hero {
+    background: url('images/fondo.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333; /* Texto en gris oscuro */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333; /* Texto en gris oscuro */
+}
+
+.imagen-con-boton {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.imagen-con-boton img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-catalogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333; /* Botón en gris oscuro */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-catalogo:hover {
+    background: #555; /* Cambio de color al pasar el mouse */
+    transform: translate(-50%, -50%) scale(1.05); /* Efecto de escala */
+}
+
+/* Catálogo de Productos */
+.catalogo {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.catalogo h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1em;
+    color: #666;
+}
+
+.btn-detalle, .btn-whatsapp {
+    background: #333; /* Botones en gris oscuro */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-detalle:hover, .btn-whatsapp:hover {
+    background: #555; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Sección de Categorías */
+.categorias {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.categoria {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categoria i {
+    color: #333; /* Iconos en gris oscuro */
+    font-size: 3em;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.categoria:hover i {
+    color: #ff6f61; /* Cambio de color al pasar el mouse */
+}
+
+.categoria h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Botón de Más Productos */
+.btn-mas-productos {
+    background: #333; /* Cambio de color a gris (#333) */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-mas-productos:hover {
+    background: #555; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Testimonios */
+.testimonios {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonios h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.testimonio {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonio span {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Contacto */
+.contacto {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto form input, .contacto form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.contacto form input:focus, .contacto form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.contacto form button {
+    background: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.contacto form button:hover {
+    background: #ff4a3d;
+}
+
+.info-contacto a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.info-contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #128c7e;
+}
+
+/* Animaciones suaves */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ALEX VENTAS</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/catalogo.css">
+        <link rel="stylesheet" href="css/categorias.css">
+        <link rel="stylesheet" href="css/testimonios.css">
+        <link rel="stylesheet" href="css/contacto.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ALEX VENTAS</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#catalogo" class="dropbtn">Catálogo <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="categoria.html?categoria=casas">Casas</a>
+                            <a href="categoria.html?categoria=fincas">Fincas</a>
+                            <a href="categoria.html?categoria=carros">Carros</a>
+                            <a href="categoria.html?categoria=joyeria">Joyeria</a>
+                            <a href="categoria.html?categoria=ropa-y-perfumeria">Ropa y Perfumería</a>
+                        </div>
+                    </li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Encuentra lo que necesitas</h2>
+            <p>Explora nuestro catálogo y contáctanos para más información.</p>
+            <div class="imagen-con-boton">
+                <img src="images/fondo.jpg" alt="Fondo del catálogo">
+                <a href="#catalogo" class="btn-catalogo">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos Relevantes -->
+    <section id="catalogo" class="catalogo">
+        <div class="container">
+            <h2>Productos Destacados</h2>
+            <div class="grid">
+                <!-- Productos destacados se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías -->
+    <section id="categorias" class="categorias">
+        <div class="container">
+            <h2>Explora por Categorías</h2>
+            <div class="grid-categorias">
+                <a href="categoria.html?categoria=casas" class="categoria">
+                    <i class="fas fa-home fa-3x"></i>
+                    <h3>Casas</h3>
+                </a>
+                <a href="categoria.html?categoria=fincas" class="categoria">
+                    <i class="fas fa-tractor fa-3x"></i>
+                    <h3>Fincas</h3>
+                </a>
+                <a href="categoria.html?categoria=carros" class="categoria">
+                    <i class="fas fa-car fa-3x"></i>
+                    <h3>Carros</h3>
+                </a>
+                <a href="categoria.html?categoria=joyeria" class="categoria">
+                    <i class="fas fa-gem fa-3x"></i>
+                    <h3>Joyeria</h3>
+                </a>
+                <a href="categoria.html?categoria=ropa-y-perfumeria" class="categoria">
+                    <i class="fas fa-tshirt fa-3x"></i>
+                    <h3>Ropa y Perfumería</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="testimonio">
+                <p>"Excelente servicio, encontré justo lo que necesitaba."</p>
+                <span>- Juan Pérez</span>
+            </div>
+            <div class="testimonio">
+                <p>"Muy profesionales, me ayudaron en todo el proceso."</p>
+                <span>- María Gómez</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
+            <form id="formulario-contacto">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <div class="info-contacto">
+                <p>Email: <a href="mailto:ventas@xyzproductos.com">ventas@xyzproductos.com</a></p>
+                <p>WhatsApp: <a href="https://wa.me/1234567890">+1 234 567 890</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 XYZ Productos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

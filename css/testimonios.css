@@ -1,0 +1,28 @@
+.testimonios {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonios h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.testimonio {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonio span {
+    font-size: 1em;
+    color: #666;
+}

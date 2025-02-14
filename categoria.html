@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría - ALEX VENTAS</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ALEX VENTAS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#catalogo" class="dropbtn">Catálogo <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="categoria.html?categoria=casas">Casas</a>
+                            <a href="categoria.html?categoria=fincas">Fincas</a>
+                            <a href="categoria.html?categoria=carros">Carros</a>
+                            <a href="categoria.html?categoria=joyeria">Joyeria</a>
+                            <a href="categoria.html?categoria=ropa-y-perfumeria">Ropa y Perfumería</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#testimonios">Testimonios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Catálogo de Productos por Categoría -->
+    <section class="catalogo">
+        <div class="container">
+            <h2 id="nombre-categoria"></h2>
+            <div class="grid">
+                <!-- Los productos se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 XYZ Productos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="categoria.js"></script>
+</body>
+</html>

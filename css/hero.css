@@ -1,0 +1,51 @@
+.hero {
+    background: url('images/fondo.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.imagen-con-boton {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.imagen-con-boton img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-catalogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-catalogo:hover {
+    background: #555;
+    transform: translate(-50%, -50%) scale(1.05);
+}

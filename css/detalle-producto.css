@@ -1,0 +1,100 @@
+/* Estilos para la sección de detalle del producto */
+.detalle-producto {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.detalle-producto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del carrusel */
+.swiper-container {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho máximo del carrusel */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Oculta las imágenes fuera del área visible */
+}
+
+/* Estilos para cada slide (imagen) */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+}
+
+/* Flechas de navegación */
+.swiper-button-next, .swiper-button-prev {
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Asegura que las flechas estén por encima de las imágenes */
+}
+
+.swiper-button-next {
+    right: 10px; /* Posición de la flecha "siguiente" */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Posición de la flecha "anterior" */
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px;
+}
+
+/* Descripción del producto */
+.descripcion {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Sección de contacto */
+.contacto-detalle {
+    margin-top: 30px;
+}
+
+.contacto-detalle h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contacto-detalle p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e;
+}
