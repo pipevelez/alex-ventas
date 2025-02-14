@@ -68,10 +68,22 @@ function cargarProductosDestacados() {
 // Cargar productos destacados al iniciar la página
 document.addEventListener('DOMContentLoaded', cargarProductosDestacados);
 
-// Control del menú desplegable
+// Control del menú desplegable (compatible con todos los dispositivos)
 document.querySelectorAll('.dropbtn').forEach(btn => {
     btn.addEventListener('click', function(e) {
         e.preventDefault(); // Previene el scroll automático
+        const dropdown = this.closest('.dropdown');
+        dropdown.classList.toggle('active');
+        
+        // Cerrar otros dropdowns abiertos
+        document.querySelectorAll('.dropdown').forEach(other => {
+            if (other !== dropdown) other.classList.remove('active');
+        });
+    });
+
+    // Soporte para eventos táctiles en dispositivos móviles
+    btn.addEventListener('touchend', function(e) {
+        e.preventDefault(); // Previene el comportamiento por defecto en móviles
         const dropdown = this.closest('.dropdown');
         dropdown.classList.toggle('active');
         
@@ -89,6 +101,14 @@ document.addEventListener('click', function(e) {
             dropdown.classList.remove('active');
         });
     }
+});
+
+// Cerrar dropdown al hacer clic en un enlace dentro del menú
+document.querySelectorAll('.dropdown-content a').forEach(link => {
+    link.addEventListener('click', function() {
+        const dropdown = this.closest('.dropdown');
+        dropdown.classList.remove('active');
+    });
 });
 
 // Cerrar dropdown en scroll

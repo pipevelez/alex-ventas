@@ -20,6 +20,7 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
+    position: relative; /* Añadido para mejor soporte en móviles */
 }
 
 nav ul li a {
@@ -44,8 +45,10 @@ nav ul li a:hover {
     background-color: #333;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Asegura que el menú esté por encima de todo */
+    z-index: 1000;
     border-radius: 5px;
+    top: 100%; /* Asegura que el menú se abra debajo del botón */
+    left: 0;
 }
 
 .dropdown-content a {
@@ -60,17 +63,19 @@ nav ul li a:hover {
     background: #555;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown.active .dropdown-content {
     display: block;
 }
 
+/* Estilos para móviles */
 @media (max-width: 768px) {
     .dropdown-content {
-        position: static;
+        position: absolute; /* Mantenemos position: absolute en móviles */
         box-shadow: none;
+        width: auto; /* Restauramos el ancho automático */
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
     }
 }
