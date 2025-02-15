@@ -63,3 +63,19 @@
     background: #555;
     transform: scale(1.05);
 }
+
+/* Estilos para el botón de WhatsApp en productos destacados */
+.btn-whatsapp {
+    background-color: #25d366; /* Verde de WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e; /* Verde más oscuro al hacer hover */
+}

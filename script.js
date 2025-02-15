@@ -134,3 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.classList.remove('active');
     });
 });
+
+// Función para redirigir hacia arriba
+document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Desplazamiento suave
+    });
+});

@@ -16,7 +16,18 @@ header .container {
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 30px;
+    width: 20ch;
+    font-family: monospace;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
 }
 
 nav ul {
@@ -100,25 +111,37 @@ nav ul li a:hover {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Menú horizontal en móviles */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben */
         width: 100%;
     }
 
     nav ul li {
-        width: 100%;
+        width: auto; /* Ancho automático para los elementos del menú */
     }
 
     .dropbtn {
-        width: 100%;
+        width: auto; /* Ancho automático para el botón de catálogo */
         justify-content: space-between;
     }
 
     .dropdown-content {
-        position: static; /* El menú se despliega hacia abajo */
-        width: 100%;
+        position: absolute; /* Menú desplegable en posición absoluta */
+        width: auto; /* Ancho automático */
     }
 
     .dropdown.active .dropdown-content {
         display: block; /* Mostrar el menú cuando está activo */
     }
+}
+
+/* Estilos para el enlace del logo */
+.logo-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+    color: #ddd; /* Cambia el color al hacer hover */
 }
