@@ -14,13 +14,35 @@ header .container {
     padding: 0 20px;
 }
 
+/* Contenedor para el logo y el título */
+.logo-title-container {
+    display: flex;
+    align-items: center; /* Alinea el logo y el título verticalmente */
+}
+
+/* Estilos para el logo */
+.logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción */
+    margin-right: 15px; /* Espacio entre el logo y el título */
+}
+
+/* Estilos para el título */
 header h1 {
     margin: 0;
     font-size: 30px;
-    width: 20ch;
     font-family: monospace;
-    text-wrap: nowrap;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    position: relative; /* Para posicionar el texto animado */
+}
+
+/* Contenedor interno para la animación */
+header h1 .animated-text {
+    display: inline-block;
+    width: 0; /* Inicia con ancho 0 */
     overflow: hidden;
+    white-space: nowrap;
     animation: typing 2s steps(20) infinite;
 }
 
@@ -28,6 +50,19 @@ header h1 {
     from {
         width: 0;
     }
+    to {
+        width: 220%; /* Ancho completo del texto */
+    }
+}
+
+/* Estilos para el enlace del logo */
+.logo-link {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8; /* Efecto hover suave */
 }
 
 nav ul {
@@ -110,6 +145,21 @@ nav ul li a:hover {
         align-items: flex-start;
     }
 
+    .logo-title-container {
+        flex-direction: column; /* Logo y título en columna en móviles */
+        align-items: flex-start;
+    }
+
+    .logo {
+        height: 40px; /* Tamaño más pequeño para móviles */
+        margin-right: 0; /* Elimina el margen derecho en móviles */
+        margin-bottom: 10px; /* Espacio entre el logo y el título */
+    }
+
+    header h1 {
+        font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
+    }
+
     nav ul {
         flex-direction: row; /* Menú horizontal en móviles */
         flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben */
@@ -133,15 +183,4 @@ nav ul li a:hover {
     .dropdown.active .dropdown-content {
         display: block; /* Mostrar el menú cuando está activo */
     }
-}
-
-/* Estilos para el enlace del logo */
-.logo-link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.logo-link:hover {
-    color: #ddd; /* Cambia el color al hacer hover */
 }
