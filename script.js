@@ -117,3 +117,10 @@ window.addEventListener('scroll', () => {
         dropdown.classList.remove('active');
     });
 });
+
+// Reiniciar el menú al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
+});
