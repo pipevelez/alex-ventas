@@ -71,51 +71,61 @@ document.addEventListener('DOMContentLoaded', cargarProductosDestacados);
 // Control del menú desplegable (compatible con todos los dispositivos)
 document.querySelectorAll('.dropbtn').forEach(btn => {
     btn.addEventListener('click', function(e) {
-        e.preventDefault(); // Previene el scroll automático
-        const dropdown = this.closest('.dropdown');
-        dropdown.classList.toggle('active');
-        
-        // Cerrar otros dropdowns abiertos
-        document.querySelectorAll('.dropdown').forEach(other => {
-            if (other !== dropdown) other.classList.remove('active');
-        });
+        if (window.innerWidth <= 768) { // Solo para móviles
+            e.preventDefault(); // Previene el scroll automático
+            const dropdown = this.closest('.dropdown');
+            dropdown.classList.toggle('active');
+            
+            // Cerrar otros dropdowns abiertos
+            document.querySelectorAll('.dropdown').forEach(other => {
+                if (other !== dropdown) other.classList.remove('active');
+            });
+        }
     });
 
     // Soporte para eventos táctiles en dispositivos móviles
     btn.addEventListener('touchend', function(e) {
-        e.preventDefault(); // Previene el comportamiento por defecto en móviles
-        const dropdown = this.closest('.dropdown');
-        dropdown.classList.toggle('active');
-        
-        // Cerrar otros dropdowns abiertos
-        document.querySelectorAll('.dropdown').forEach(other => {
-            if (other !== dropdown) other.classList.remove('active');
-        });
+        if (window.innerWidth <= 768) { // Solo para móviles
+            e.preventDefault(); // Previene el comportamiento por defecto en móviles
+            const dropdown = this.closest('.dropdown');
+            dropdown.classList.toggle('active');
+            
+            // Cerrar otros dropdowns abiertos
+            document.querySelectorAll('.dropdown').forEach(other => {
+                if (other !== dropdown) other.classList.remove('active');
+            });
+        }
     });
 });
 
 // Cerrar dropdown al hacer clic fuera
 document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-            dropdown.classList.remove('active');
-        });
+    if (window.innerWidth <= 768) { // Solo para móviles
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
     }
 });
 
 // Cerrar dropdown al hacer clic en un enlace dentro del menú
 document.querySelectorAll('.dropdown-content a').forEach(link => {
     link.addEventListener('click', function() {
-        const dropdown = this.closest('.dropdown');
-        dropdown.classList.remove('active');
+        if (window.innerWidth <= 768) { // Solo para móviles
+            const dropdown = this.closest('.dropdown');
+            dropdown.classList.remove('active');
+        }
     });
 });
 
 // Cerrar dropdown en scroll
 window.addEventListener('scroll', () => {
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-        dropdown.classList.remove('active');
-    });
+    if (window.innerWidth <= 768) { // Solo para móviles
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
 });
 
 // Reiniciar el menú al cargar la página
