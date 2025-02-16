@@ -146,18 +146,25 @@ nav ul li a:hover {
     }
 
     .logo-title-container {
-        flex-direction: row; /* Logo y título en la misma línea en móviles */
-        align-items: center; /* Centra verticalmente el logo y el título */
+        display: flex;
+        flex-direction: row; /* Logo y texto animado en la misma línea */
+        align-items: center; /* Centra verticalmente el logo y el texto */
     }
 
     .logo {
         height: 40px; /* Tamaño más pequeño para móviles */
-        margin-right: 10px; /* Espacio entre el logo y el título */
+        margin-right: 10px; /* Espacio entre el logo y el texto */
         margin-bottom: 0; /* Elimina el margen inferior */
     }
 
     header h1 {
         font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
+        margin: 0; /* Elimina el margen del título */
+    }
+
+    nav {
+        width: 100%; /* El menú ocupa todo el ancho */
+        margin-top: 10px; /* Espacio entre el logo/título y el menú */
     }
 
     nav ul {
