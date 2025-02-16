@@ -22,7 +22,7 @@ header .container {
 
 /* Estilos para el logo */
 .logo {
-    height: 50px; /* Ajusta el tamaño del logo */
+    height: 50px; /* Tamaño del logo en PC */
     width: auto; /* Mantiene la proporción */
     margin-right: 15px; /* Espacio entre el logo y el título */
 }
@@ -51,7 +51,7 @@ header h1 .animated-text {
         width: 0;
     }
     to {
-        width: 220%; /* Ancho completo del texto */
+        width: 220px; /* Ajusta este valor para que el texto se vea completo */
     }
 }
 
