@@ -146,14 +146,14 @@ nav ul li a:hover {
     }
 
     .logo-title-container {
-        flex-direction: column; /* Logo y título en columna en móviles */
-        align-items: flex-start;
+        flex-direction: row; /* Logo y título en la misma línea en móviles */
+        align-items: center; /* Centra verticalmente el logo y el título */
     }
 
     .logo {
         height: 40px; /* Tamaño más pequeño para móviles */
-        margin-right: 0; /* Elimina el margen derecho en móviles */
-        margin-bottom: 10px; /* Espacio entre el logo y el título */
+        margin-right: 10px; /* Espacio entre el logo y el título */
+        margin-bottom: 0; /* Elimina el margen inferior */
     }
 
     header h1 {
